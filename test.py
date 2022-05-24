@@ -1,3 +1,4 @@
+from time import time
 from paddleocr import PaddleOCR
 from pywebio import start_server, output, input
 from io import BytesIO
@@ -17,14 +18,17 @@ def main():
     img.save('./userpic.jpg')
     output.toast('已提交，请稍等，越复杂越慢！', duration=5)
     # 处理图片
+    start_time = time.time()
     ocr = PaddleOCR(use_angle_cls=True, use_gpu=False)
     result = ocr.ocr('./userpic.jpg', cls=True)
-    output.toast('处理成功，请查看对比！')
-    # 输出文字和准确率
+    end_time = time.time()
+    use_time = end_time - start_time
+    output.toast(f'处理成功，请查看对比！用时{"%.2f" % use_time}秒')
+    # 输出文字和准确率f
     for line in result:
-        output.put_markdown(line[1][0])
-        # output.put_markdown(line[1][0] + '----------------' +
-        #                     '%.2f' % line[1][1])
+        # output.put_markdown(line[1][0])
+        output.put_markdown(line[1][0] + '----------------' +
+                            '%.2f' % line[1][1])
     # 输出图片
     output.put_image(up_pic['content'])
     # 删除本地图片
