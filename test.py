@@ -1,4 +1,4 @@
-from time import time
+import time
 from paddleocr import PaddleOCR
 from pywebio import start_server, output, input
 from io import BytesIO
