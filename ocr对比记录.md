@@ -51,5 +51,6 @@
   ~~~ 
   - 模型目录：C:\Users\Administrator\AppData\Roaming 下
 
-
+### 对比表格
+![对比表格](./ocr%E5%AF%B9%E6%AF%94.JPG)
 
