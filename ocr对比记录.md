@@ -11,7 +11,7 @@
 - 可能安装失败的包：shapely ， python_Levenshtein
   1. 如失败到 https://www.lfd.uci.edu/~gohlke/pythonlibs/ 上下载，快速查找 crtl + f
   2. 复制到虚拟环境E:\anaconda\envs\paddle_env\Lib\site-packages文件夹下再pip install一次（E:\anaconda\envs\paddle_env\为你的anaconda安装目录下虚拟环境，\paddle_env\你的虚拟环境名称）
-- 模型路径：C:\Users\Administrator\.paddleocr\whl（默认就有模型）
+- 模型路径：C:\Users\Administrator\.paddleocr\whl（首次执行下载）
 
 ### easyocr
 - windows操作系统下安装（基于anconda，熟悉后可不用，安装一定要pip国内镜像源）：
